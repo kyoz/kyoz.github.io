@@ -372,8 +372,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SinceWeMeetComponent = /** @class */ (function () {
     function SinceWeMeetComponent() {
-        this.meetTime = new Date('08:23 11/06/2017').getTime();
-        this.startTime();
+        var _this = this;
+        this.meetTime = new Date('11/06/2017 08:23:00').getTime();
+        setInterval(function () {
+            _this.startTime();
+        }, 500);
         this.typingText();
     }
     SinceWeMeetComponent.prototype.startTime = function () {
@@ -396,9 +399,6 @@ var SinceWeMeetComponent = /** @class */ (function () {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
-        setTimeout(function () {
-            this.startTime();
-        }, 250);
     };
     SinceWeMeetComponent.prototype.formatTime = function (time) {
         if (time < 10) {
