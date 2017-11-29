@@ -377,7 +377,6 @@ var SinceWeMeetComponent = /** @class */ (function () {
         this.typingText();
     }
     SinceWeMeetComponent.prototype.startTime = function () {
-        var _this = this;
         var today = new Date().getTime();
         // get total seconds between the times
         var delta = Math.abs(today - this.meetTime) / 1000;
@@ -398,7 +397,7 @@ var SinceWeMeetComponent = /** @class */ (function () {
         this.minutes = minutes;
         this.seconds = seconds;
         setTimeout(function () {
-            _this.startTime();
+            this.startTime();
         }, 250);
     };
     SinceWeMeetComponent.prototype.formatTime = function (time) {
