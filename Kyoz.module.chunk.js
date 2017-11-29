@@ -58,7 +58,8 @@ var KyozModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__components__["c" /* MainComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__components__["b" /* HomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__components__["a" /* AvatarFlipperComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components__["d" /* TwinkingStarsBackgroundComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components__["e" /* TwinkingStarsBackgroundComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components__["d" /* SinceWeMeetComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__directives__["a" /* SampleDirectiveDirective */],
                 __WEBPACK_IMPORTED_MODULE_9__pipes__["a" /* SamplePipePipe */],
             ],
@@ -232,7 +233,10 @@ var HomeComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__avatar_flipper__ = __webpack_require__("../../../../../src/lib/components/avatar-flipper/index.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__avatar_flipper__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__twinkling_stars_background__ = __webpack_require__("../../../../../src/lib/components/twinkling-stars-background/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__twinkling_stars_background__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__twinkling_stars_background__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__since_we_meet__ = __webpack_require__("../../../../../src/lib/components/since-we-meet/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_4__since_we_meet__["a"]; });
+
 
 
 
@@ -311,6 +315,164 @@ var MainComponent = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/lib/components/since-we-meet/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__since_we_meet__ = __webpack_require__("../../../../../src/lib/components/since-we-meet/since-we-meet.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__since_we_meet__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/lib/components/since-we-meet/since-we-meet.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div class=\"heart heart-bg\"></div> -->\r\n\r\n<link href=\"https://fonts.googleapis.com/css?family=Roboto+Slab\" rel=\"stylesheet\">\r\n<div class=\"since-we-meet-container\">\r\n\r\n  <h1>\r\n    <span\r\n       class=\"txt-rotate\"\r\n       data-period=\"2000\"\r\n       data-rotate='[ \"Em ơi.\", \"Dù có như thế nào đi nữa.\", \"Anh cũng thương em.\", \"Cũng yêu em.\", \"^_^\" ]'></span>\r\n  </h1>\r\n  <h2>Đã {{ days }} ngày, {{ hours }} giờ, {{ minutes }} phút, {{ seconds }} giây</h2>\r\n  <h2>...kể từ ngày mình gặp nhau</h2>\r\n  <div class=\"heart heart-main\"></div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/lib/components/since-we-meet/since-we-meet.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".heart {\n  position: absolute;\n  width: 100px;\n  height: 90px;\n  bottom: 20%;\n  left: 50%;\n  margin-top: -45px;\n  margin-left: -50px; }\n  .heart:before, .heart:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    width: 50px;\n    height: 80px;\n    background: #fc2e5a;\n    border-radius: 50px 50px 0 0; }\n  .heart:before {\n    left: 50px;\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n    -webkit-transform-origin: 0 100%;\n            transform-origin: 0 100%; }\n  .heart:after {\n    left: 0;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg);\n    -webkit-transform-origin: 100% 100%;\n            transform-origin: 100% 100%; }\n\n.heart-bg {\n  -webkit-animation: heart-anim 1s linear .55555finite;\n          animation: heart-anim 1s linear .55555finite; }\n  .heart-bg:before, .heart-bg:after {\n    background-color: #ff7693; }\n\n.heart-main {\n  -webkit-animation: pounding .5s linear infinite alternate;\n          animation: pounding .5s linear infinite alternate; }\n\n@-webkit-keyframes pounding {\n  0% {\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes pounding {\n  0% {\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@-webkit-keyframes heart-anim {\n  46% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(1.3);\n            transform: scale(1.3); }\n  52% {\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5); }\n  55% {\n    -webkit-transform: scale(3);\n            transform: scale(3); }\n  100% {\n    opacity: 0;\n    -webkit-transform: scale(50);\n            transform: scale(50); } }\n\n@keyframes heart-anim {\n  46% {\n    -webkit-transform: scale(1);\n            transform: scale(1); }\n  50% {\n    -webkit-transform: scale(1.3);\n            transform: scale(1.3); }\n  52% {\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5); }\n  55% {\n    -webkit-transform: scale(3);\n            transform: scale(3); }\n  100% {\n    opacity: 0;\n    -webkit-transform: scale(50);\n            transform: scale(50); } }\n\n.since-we-meet-container {\n  font-family: 'Roboto Slab', sans-serif;\n  padding: 2em 2em;\n  font-size: 18px;\n  background: #222;\n  color: #aaa;\n  height: calc(100vh - 4em);\n  width: calc(100vw - 4em); }\n\nh1, h2 {\n  font-weight: 200;\n  margin: 0.4em 0; }\n\nh1 {\n  font-size: 3.5em; }\n\nh2 {\n  color: #888;\n  font-size: 2em; }\n\n@media only screen and (max-width: 750px) {\n  h1 {\n    font-size: 20px; }\n  h2 {\n    font-size: 15px; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/lib/components/since-we-meet/since-we-meet.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SinceWeMeetComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SinceWeMeetComponent = /** @class */ (function () {
+    function SinceWeMeetComponent() {
+        this.meetTime = new Date('08:23 11/06/2017').getTime();
+        this.startTime();
+        this.typingText();
+    }
+    SinceWeMeetComponent.prototype.startTime = function () {
+        var _this = this;
+        var today = new Date().getTime();
+        // get total seconds between the times
+        var delta = Math.abs(today - this.meetTime) / 1000;
+        // calculate (and subtract) whole days
+        var days = Math.floor(delta / 86400);
+        delta -= days * 86400;
+        // calculate (and subtract) whole hours
+        var hours = Math.floor(delta / 3600) % 24;
+        delta -= hours * 3600;
+        // calculate (and subtract) whole minutes
+        var minutes = Math.floor(delta / 60) % 60;
+        delta -= minutes * 60;
+        // what's left is seconds
+        var seconds = Math.floor(delta % 60); // in theory the modulus is not required
+        // console.log(days + " days, " + hours + " hours, " + minutes + " minutes " + seconds + "seconds until Christmas 2009 =)");
+        this.days = days;
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+        setTimeout(function () {
+            _this.startTime();
+        }, 250);
+    };
+    SinceWeMeetComponent.prototype.formatTime = function (time) {
+        if (time < 10) {
+            return '0' + time;
+        }
+        return time;
+    };
+    SinceWeMeetComponent.prototype.typingText = function () {
+        var TxtRotate = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+        TxtRotate.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            }
+            else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+            var that = this;
+            var delta = 300 - Math.random() * 100;
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            }
+            else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+        window.onload = function () {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+            document.body.appendChild(css);
+        };
+    };
+    SinceWeMeetComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'since-we-meet',
+            template: __webpack_require__("../../../../../src/lib/components/since-we-meet/since-we-meet.html"),
+            styles: [__webpack_require__("../../../../../src/lib/components/since-we-meet/since-we-meet.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SinceWeMeetComponent);
+    return SinceWeMeetComponent;
+}());
+
+//# sourceMappingURL=since-we-meet.js.map
 
 /***/ }),
 
@@ -456,6 +618,10 @@ var routes = [
                 ]
             }
         ]
+    },
+    {
+        path: 'em',
+        component: __WEBPACK_IMPORTED_MODULE_2__components__["d" /* SinceWeMeetComponent */]
     }
 ];
 var KyozRoutingModule = /** @class */ (function () {

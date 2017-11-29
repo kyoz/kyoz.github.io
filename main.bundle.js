@@ -81,7 +81,7 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -201,7 +201,7 @@ var AppComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/dashboard/dashboard.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
